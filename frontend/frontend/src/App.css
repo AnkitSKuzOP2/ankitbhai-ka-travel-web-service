@@ -1,0 +1,281 @@
+@import url("https://fonts.googleapis.com/css2?family=Island+Moments&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap");
+
+:root {
+  --primary-color: #ff7e01;
+  --secondary-color: #faa935;
+  --heading-color: #0b2727;
+  --text-color: #6e7074;
+  --bg-color: #ffffff;
+  --card-bg: #ffffff;
+  --border-color: #dee2e6;
+  --font-name: "Montserrat", sans-serif;
+  --subtitle-font-name: "Island Moments", cursive;
+}
+
+body.dark-theme {
+  --primary-color: #ff7e01;
+  --secondary-color: #faa935;
+  --heading-color: #f1f1f1;
+  --text-color: #b0b3b8;
+  --bg-color: #121212;
+  --card-bg: #1e1e1e;
+  --border-color: #333333;
+}
+
+/* 1. Global Background Reset */
+body.dark-theme *,
+body.dark-theme section,
+body.dark-theme header,
+body.dark-theme footer {
+  border-color: var(--border-color) !important;
+}
+
+/* 2. Strip Light Backgrounds & Gradients from Structural Containers */
+body.dark-theme section,
+body.dark-theme [class*="section"],
+body.dark-theme [class*="container"],
+body.dark-theme .header {
+  background-color: transparent !important;
+  background-image: none !important;
+}
+
+/* 3. Force Cards and Specific Containers to Dark Card BG */
+body.dark-theme .bg-light,
+body.dark-theme .bg-white,
+body.dark-theme .card,
+body.dark-theme [class*="-card"],
+body.dark-theme .modal-content,
+body.dark-theme .booking,
+body.dark-theme .list-group-item,
+body.dark-theme .search__bar,
+body.dark-theme .tour__content,
+body.dark-theme .tour__info,
+body.dark-theme .place__content,
+body.dark-theme .about-content,
+body.dark-theme .developer-credit,
+body.dark-theme .menu,
+body.dark-theme .dashboard-menu a,
+body.dark-theme .feedback,
+body.dark-theme .social-item {
+  background: var(--card-bg) !important;
+  color: var(--heading-color) !important;
+}
+
+/* 4. Inputs and Forms */
+body.dark-theme .form-control,
+body.dark-theme .form-select,
+body.dark-theme input {
+  background-color: var(--card-bg) !important;
+  color: var(--heading-color) !important;
+  border: 1px solid var(--border-color) !important;
+}
+
+/* 5. Typography Enforcement */
+body.dark-theme h1,
+body.dark-theme h2,
+body.dark-theme h3,
+body.dark-theme h4,
+body.dark-theme h5,
+body.dark-theme h6,
+body.dark-theme .text-dark,
+body.dark-theme .text-black,
+body.dark-theme strong,
+body.dark-theme b {
+  color: var(--heading-color) !important;
+}
+
+body.dark-theme p,
+body.dark-theme span,
+body.dark-theme .text-muted {
+  color: var(--text-color) !important;
+}
+
+/* Exclude spans that are primary buttons or icons */
+body.dark-theme span.text-warning,
+body.dark-theme span.badge,
+body.dark-theme i {
+  color: inherit;
+}
+
+/* 6. Tables */
+body.dark-theme .table {
+  color: var(--heading-color) !important;
+}
+body.dark-theme .table-light th,
+body.dark-theme .table-light td,
+body.dark-theme .table .table-light {
+  background-color: #2c2c2c !important;
+  color: var(--heading-color) !important;
+}
+
+/* ========================================================
+   GLOBAL UI/UX ENHANCEMENTS AND ANIMATIONS
+   ======================================================== */
+
+@keyframes smoothFadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Apply smooth fade in to major containers so white/empty screens feel dynamic */
+section, 
+.container,
+.login__container,
+.dashboard-card,
+.admin-dashboard-card,
+.tour__card,
+.testimonial {
+  animation: smoothFadeInUp 0.7s cubic-bezier(0.25, 0.8, 0.25, 1) both;
+}
+
+/* Add a cascading delay to multiple cards so they stagger in nicely */
+.row > div:nth-child(1) { animation-delay: 0.1s; }
+.row > div:nth-child(2) { animation-delay: 0.2s; }
+.row > div:nth-child(3) { animation-delay: 0.3s; }
+.row > div:nth-child(4) { animation-delay: 0.4s; }
+
+/* Global Button Interactions */
+.btn {
+  transition: all 0.3s ease-in-out !important;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15) !important;
+}
+
+.btn:active {
+  transform: translateY(1px);
+}
+
+body.dark-theme .btn:hover {
+  box-shadow: 0 10px 20px rgba(255, 255, 255, 0.05) !important;
+}
+
+/* Input visual enhancements */
+input, select, textarea {
+  transition: all 0.3s ease !important;
+}
+
+input:focus, select:focus, textarea:focus {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 15px rgba(250, 169, 53, 0.15) !important;
+  border-color: var(--secondary-color) !important;
+}
+
+/* Image hover zoom enhancement for every image structure */
+img {
+  transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-name);
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+section {
+  padding: 50px 0px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--heading-color);
+}
+
+a {
+  text-decoration: none;
+  color: unset;
+}
+ul {
+  list-style: none;
+}
+
+.primary__btn {
+  background: var(--secondary-color) !important;
+  border: none !important;
+  border-radius: 50px !important;
+  padding: 0.4rem 1.5rem !important;
+}
+
+.primary__btn a {
+  font-size: 1.1rem;
+  text-decoration: none;
+  color: #fff;
+}
+.primary__btn a:hover {
+  color: inherit;
+}
+.secondary__btn {
+  background: transparent !important;
+  color: #0b2727 !important;
+  border: none !important;
+  font-weight: 500 !important;
+}
+
+.secondary__btn a {
+  text-decoration: none;
+  font-size: 1.1rem;
+  color: var(--heading-color);
+}
+
+.secondary__btn a:hover {
+  color: inherit;
+}
+
+.section__subtitle {
+  background: var(--secondary-color);
+  font-family: var(--subtitle-font-name);
+  width: max-content;
+  padding: 0px 0.5rem;
+  padding-right: 1rem;
+
+  border-radius: 50px;
+  font-weight: 500;
+  font-size: 1.7rem;
+  color: var(--heading-color);
+}
+
+@media only screen and (max-width:992px) {
+  .primary__btn a,
+  .secondary__btn a {
+    font-size: 0.9rem;
+  }
+
+  .primary__btn,
+  .secondary__btn,
+  .btn-dark {
+    padding: 0.2rem 1.1rem !important;
+  }
+
+  section {
+    padding: 40px 0;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .section__subtitle {
+    font-size: 1.3rem;
+  }
+}

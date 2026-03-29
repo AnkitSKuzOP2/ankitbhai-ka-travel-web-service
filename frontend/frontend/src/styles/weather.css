@@ -1,0 +1,103 @@
+/* Premium Weather UI Styling */
+
+.weather-hero-banner {
+    background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+    min-height: 250px;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+}
+
+.weather-content-section {
+    padding-bottom: 80px;
+}
+
+.search-weather-box {
+    border: 1px solid rgba(255,255,255,0.8);
+    backdrop-filter: blur(20px);
+}
+
+.search-input-wrap input {
+    box-shadow: none !important;
+    transition: all 0.3s ease;
+}
+
+.search-input-wrap input:focus {
+    background: #fff !important;
+    border-color: #f59e0b !important;
+    box-shadow: 0 0 0 0.25rem rgba(245, 158, 11, 0.25) !important;
+}
+
+/* Beautiful Hero Card */
+.hero-weather-card {
+    transition: all 0.5s ease;
+}
+
+.hero-weather-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25) !important;
+}
+
+.weather-bg-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at top right, rgba(255,255,255,0.2) 0%, transparent 60%);
+    z-index: 1;
+}
+
+.weather-hero-metrics div {
+    font-weight: 500;
+    font-size: 1.1rem;
+}
+
+/* Standard State Cards */
+.weather-card {
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    height: 100%;
+    min-height: 200px;
+    cursor: default;
+}
+
+.weather-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04) !important;
+}
+
+/* Animations */
+.animation-fade-in {
+    animation: fadeIn 0.6s ease-out forwards;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* High-End Skeleton Loaders */
+.skeleton-line {
+    background: linear-gradient(90deg, #f1f5f9 25%, #e2e8f0 50%, #f1f5f9 75%);
+    background-size: 200% 100%;
+    animation: loading 1.5s infinite;
+    border-radius: 4px;
+    height: 1.5rem;
+}
+
+.skeleton-line.title {
+    height: 2rem;
+}
+
+.skeleton-circle {
+    background: linear-gradient(90deg, #f1f5f9 25%, #e2e8f0 50%, #f1f5f9 75%);
+    background-size: 200% 100%;
+    animation: loading 1.5s infinite;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+}
+
+@keyframes loading {
+    0% { background-position: 200% 0; }
+    100% { background-position: -200% 0; }
+}

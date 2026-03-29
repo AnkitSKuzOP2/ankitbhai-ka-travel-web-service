@@ -1,0 +1,38 @@
+.places-list {
+  background: #fff;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+}
+
+.places-list ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.places-list li {
+  border-bottom: 1px solid #f0f0f0;
+  padding: 0.5rem 0;
+}
+
+.places-list button {
+  min-width: 120px;
+}
+
+.badge-recommended {
+  display: inline-block;
+  background: #ff8c00;
+  color: #fff;
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  vertical-align: middle;
+}
+
+@media (max-width: 576px) {
+  .places-list button {
+    width: 100%;
+    margin-top: 8px;
+  }
+}

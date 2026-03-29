@@ -1,19 +1,14 @@
 {
-  "name": "backend",
+  "name": "travel-web-service-api",
   "version": "1.0.0",
-  "description": "",
+  "description": "Online Tourist Guide - Backend API",
   "type": "module",
-  "main": "index.js",
+  "main": "api/index.js",
   "scripts": {
-    "start": "node index.js",
-    "start-dev": "nodemon index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node api/index.js"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
   "dependencies": {
-    "bcrypt": "^6.0.0",
+    "axios": "^1.4.1",
     "bcryptjs": "^3.0.2",
     "cloudinary": "^1.21.0",
     "cookie-parser": "^1.4.7",
@@ -23,9 +18,8 @@
     "jsonwebtoken": "^9.0.2",
     "mongodb": "^6.16.0",
     "mongoose": "^7.8.7",
-    "nodemon": "^3.1.10"
-    ,
-    "axios": "^1.4.1"
+    "nodemailer": "^8.0.3",
+    "nodemon": "^3.1.10",
+    "serverless-http": "^4.0.0"
   }
 }
-
